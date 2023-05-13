@@ -8,7 +8,7 @@ export const createUserToDB = async () => {
     name: {
       firstName: "MR homes",
       middleName: "khan",
-      lastName: "akkas",
+      lastName: "akkas ali",
     },
     // dateOfBirth: "08/03/2000",
     gender: "male",
