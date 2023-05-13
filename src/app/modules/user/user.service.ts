@@ -6,7 +6,7 @@ export const createUserToDB = async () => {
     roll: "students",
     password: "8784654",
     name: {
-      firstName: "MR Jerry",
+      firstName: "MR homes",
       middleName: "khan",
       lastName: "akkas",
     },
