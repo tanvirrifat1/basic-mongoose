@@ -49,7 +49,7 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
       middleName: { type: String },
       lastName: { type: String, required: true },
     },
-    dateOfBirth: { type: String, required: true },
+    dateOfBirth: { type: String },
     gender: { type: String, enum: ["male", "female"] },
     contactNo: { type: String, required: true },
     email: { type: String },
@@ -57,6 +57,32 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
     presentAddress: { type: String, required: true },
     permanentAddress: { type: String, required: true },
   });
+
+  // create Model
+  const User = model<IUser>("User", userSchema);
+
+  const createUserToDB = async () => {
+    const user = new User({
+      id: "1111",
+      roll: "students",
+      password: "44444545545",
+      name: {
+        firstName: "MR akkas",
+        middleName: "khan",
+        lastName: "akkas",
+      },
+      // dateOfBirth: "08/03/2000",
+      gender: "male",
+      contactNo: "014545534654",
+      email: "akkas@gmail.com",
+      emergencyContactNo: "545465456",
+      presentAddress: "garpara",
+      permanentAddress: "dont know",
+    });
+    await user.save();
+    console.log(user);
+  };
+  createUserToDB();
 });
 
 export default app;
