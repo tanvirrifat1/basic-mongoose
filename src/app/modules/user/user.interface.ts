@@ -18,12 +18,6 @@ export interface IUser {
   permanentAddress: string;
 }
 
-// export interface UserModel extends Model<IUser> {
-//   getAdminUsers(): IUser;
-// }
-
-// //
-
 export interface IUserMethods {
   fullName(): string;
 }
