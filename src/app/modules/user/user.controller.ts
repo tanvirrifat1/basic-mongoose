@@ -55,7 +55,7 @@ export const getAdminUsers = async (
   next: NextFunction
 ) => {
   const user = await getAdminUsersFromDB();
-  console.log("hitted from getAdminUsers");
+  console.log("hit from getUserAdmins");
   res.status(200).json({
     status: "success",
     data: user,

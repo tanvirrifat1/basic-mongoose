@@ -4,19 +4,9 @@ import { IUser, IUserMethods, UserModel } from "./user.interface";
 // type UserModel = Model<IUser, {}, IUserMethods>;
 
 const userSchema = new Schema<IUser, UserModel, IUserMethods>({
-  id: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  roll: {
-    type: String,
-    required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
+  id: { type: String, required: true, unique: true },
+  roll: { type: String, required: true },
+  password: { type: String, required: true },
 
   name: {
     firstName: {
@@ -31,32 +21,16 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>({
       required: true,
     },
   },
-  dateOfBirth: {
-    type: String,
-  },
+  dateOfBirth: { type: String },
   gender: {
     type: String,
     enum: ["male", "female"],
   },
-  email: {
-    type: String,
-  },
-  contactNo: {
-    type: String,
-    required: true,
-  },
-  emergencyContactNo: {
-    type: String,
-    required: true,
-  },
-  presentAddress: {
-    type: String,
-    required: true,
-  },
-  permanentAddress: {
-    type: String,
-    required: true,
-  },
+  email: { type: String },
+  contactNo: { type: String, required: true },
+  emergencyContactNo: { type: String, required: true },
+  presentAddress: { type: String, required: true },
+  permanentAddress: { type: String, required: true },
 });
 
 // class -> this.  --> classs
