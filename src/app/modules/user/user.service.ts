@@ -19,6 +19,7 @@ export const getUserByIdFromDB = async (
   payload: string
 ): Promise<IUser | null> => {
   const user = await User.findOne({ id: payload }, { name: 1, contactNo: 1 });
+  console.log(user);
   return user;
 };
 

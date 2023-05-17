@@ -3,23 +3,15 @@ import { IUser, IUserMethods, UserModel } from "./user.interface";
 
 // type UserModel = Model<IUser, {}, IUserMethods>;
 
-const userSchema = new Schema<IUser, UserModel, IUserMethods>({
-  id: { type: String, required: true, unique: true },
+// create schema
+const userSchema = new Schema<IUser>({
+  id: { type: String, required: true },
   roll: { type: String, required: true },
   password: { type: String, required: true },
-
   name: {
-    firstName: {
-      type: String,
-      required: true,
-    },
-    middleName: {
-      type: String,
-    },
-    lastName: {
-      type: String,
-      required: true,
-    },
+    firstName: { type: String, required: true },
+    middleName: { type: String, required: true },
+    lastName: { type: String, required: true },
   },
   dateOfBirth: { type: String },
   gender: {
